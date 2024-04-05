@@ -1,0 +1,284 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap');
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/*
+    2. Remove default margin
+  */
+* {
+    margin: 0;
+}
+
+/*
+    Typographic tweaks!
+    3. Add accessible line-height
+    4. Improve text rendering
+  */
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+/*
+    5. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+/*
+    6. Remove built-in form typography styles
+  */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/*
+    7. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+/*
+    8. Create a root stacking context
+  */
+#root,
+#__next {
+    isolation: isolate;
+}
+
+
+/* Start design here */
+
+/* Notes:
+    -- BG COLOR -- 
+- Light slate blue (background): hsl(252, 100%, 67%) HEX #7857ff
+- Light royal blue (background): hsl(241, 81%, 54%) HEX #2e2be9
+
+- Violet blue (circle): hsla(256, 72%, 46%, 1) HEX #4e21ca
+- Persian blue (circle): hsla(241, 72%, 46%, 0) HEX #2421ca
+
+    --h4 colors-- 
+- Light red: hsl(0, 100%, 67%) HEX	#ff5757
+- Orangey yellow: hsl(39, 100%, 56%) HEX #ffb01f
+- Green teal: hsl(166, 100%, 37%) HEX #00bd91
+- Cobalt blue: hsl(234, 85%, 45%) HEX #1125d4
+
+ -- hindi ko alam para saan to ill figure out--
+- White: hsl(0, 0%, 100%)
+- Pale blue: hsl(221, 100%, 96%) rgb(235, 241, 255)
+- Light lavender: hsl(241, 100%, 89%) rgb(200, 199, 255)
+- Dark gray blue: hsl(224, 30%, 27%) rgb(48, 59, 90)
+
+
+*/
+
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: "Hanken Grotesk", sans-serif;
+    font-size: 18px;
+}
+
+
+.wrapper {
+    display: flex;
+    background-color: white;
+    width: 700px;
+    height: 500px;
+    border-top: 2px solid white;
+    border-right: 2px solid white;
+    border-bottom: 2px solid white;
+    border-radius: 35px;
+    box-shadow: 0px 4px 10px rgb(200, 199, 255);
+}
+
+.item-1 {
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(to bottom, hsl(252, 100%, 67%), rgba(46, 43, 233, 1));
+    border-radius: 35px;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 1rem;
+    padding: 2rem;
+    width: 400px;
+    height: 500px;
+
+}
+
+.item-1 h1 {
+    text-align: center;
+    color: rgb(200, 199, 255);
+}
+
+.circle {
+    height: 200px;
+    width: 200px;
+    text-align: center;
+    border-radius: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-image: linear-gradient(to bottom, hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+}
+
+.circle h2 {
+    font-size: 3em;
+    color: white;
+    font-weight: 800;
+}
+
+.circle p {
+    color: rgb(200, 199, 255);
+}
+
+.info {
+    text-align: center;
+}
+
+.info h3 {
+    color: rgb(255, 255, 255);
+    font-size: 2em;
+}
+
+.info p {
+    font-size: 0.875em;
+    color: rgb(200, 199, 255)
+}
+
+
+.item-2 {
+    width: 400px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 1rem;
+    padding: 2rem;
+}
+
+.item-2 button{
+    width: 100%;
+    border-radius: 50px;
+    height: 50px;   
+    border: none;
+    cursor: pointer;
+    background-color:rgb(48, 59, 90) ;
+    color: white;
+    font-size: 0.875em;
+}
+
+.item-2 button:hover{
+    background-image: linear-gradient(to bottom, hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+}
+
+.item-2 h3{
+    color: hsl(224, 30%, 27%);
+}
+
+
+.inner-info{
+    display: flex;
+    padding: 10px;
+    border-radius: 10px;
+    justify-content: space-between;
+}
+
+.item-2 .inner-info:nth-child(2){
+    background-color: hsla(0, 100%, 67%,0.080) ;
+}
+.item-2 .inner-info:nth-child(3){
+    background-color: hsla(39, 100%, 56%,0.080) ;
+}
+.item-2 .inner-info:nth-child(4){
+    background-color: hsla(166, 100%, 37%,0.080) ;
+}
+.item-2 .inner-info:nth-child(5){
+    background-color: hsla(234, 85%, 45%,0.080) ;
+}
+
+.item-2 .inner-info:nth-child(2) h4 {
+    color:hsl(0, 100%, 67%); 
+  }
+  
+  .item-2 .inner-info:nth-child(3) h4 {
+    color: hsl(39, 100%, 56%); 
+  }
+  
+  .item-2 .inner-info:nth-child(4) h4 {
+    color: hsl(166, 100%, 37%); 
+  }
+  .item-2 .inner-info:nth-child(5) h4 {
+    color: hsl(234, 85%, 45%);
+  }
+
+  .flex{
+    display: flex;
+    
+}
+.flex img{
+    margin-right: 9px;
+}
+
+.dark-gray-blue {
+    color:hsl(224, 30%, 27%) ;
+    font-weight: 800;
+}
+
+.grey{
+   color: hsl(241, 100%, 89%);
+}
+
+
+@media (max-width:720px) {
+    .wrapper{
+        flex-direction: column;
+        height: 900px;
+        width: 400px;
+        box-shadow: none;
+    }
+
+    .item-1{
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+    }
+}
+
+@media (max-width:430px){
+    .wrapper{
+        width:350px ;
+    }
+
+    .item-1{
+        width: 350px;
+    }
+    .item-2{
+        width: 350px;
+    }
+}
